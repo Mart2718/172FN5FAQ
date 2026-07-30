@@ -1,0 +1,196 @@
+{
+  "section": "FN5",
+  "title": "Combining and Composing Functions",
+  "learningObjective": "Find the sum, difference, product, quotient, and composition of two or more functions and evaluate them.",
+  "faqs": [
+    {
+      "id": "faq-1",
+      "category": "conceptual",
+      "question": "What does it mean to add, subtract, multiply, or divide two functions?",
+      "answer": "Combining two functions with an arithmetic operation just means applying that operation to their outputs. If f(x) and g(x) are both defined at some x-value, you can add, subtract, multiply, or divide their two outputs to create a brand new function. The input still comes from the same x — you're just combining what each function individually produces from it."
+    },
+    {
+      "id": "faq-2",
+      "category": "conceptual",
+      "question": "What is the notation for combining functions, like (f+g)(x)?",
+      "answer": "Each arithmetic combination has its own compact notation, and all four follow the same pattern: apply the operation between the two functions' outputs.<div class=\"example-box\"><div class=\"label\">Notation</div><p class=\"math-line\">\\( (f+g)(x) = f(x)+g(x) \\)</p><p class=\"math-line\">\\( (f-g)(x) = f(x)-g(x) \\)</p><p class=\"math-line\">\\( (f \\cdot g)(x) = f(x)\\cdot g(x) \\)</p><p class=\"math-line\">\\( \\left(\\dfrac{f}{g}\\right)(x) = \\dfrac{f(x)}{g(x)} \\)</p></div>"
+    },
+    {
+      "id": "faq-3",
+      "category": "conceptual",
+      "question": "Why is there a domain restriction on (f/g)(x) that doesn't apply to the other operations?",
+      "answer": "Division has one restriction that addition, subtraction, and multiplication don't: you can never divide by zero. So (f/g)(x) is only defined where g(x) ≠ 0 — anywhere g(x) equals zero has to be excluded from the domain. This is the exact same restriction you learned back in FN1 for rational functions; you're just applying it to a function in the denominator instead of a plain expression."
+    },
+    {
+      "id": "faq-4",
+      "category": "conceptual",
+      "question": "What is function composition, and what does f(g(x)) actually mean?",
+      "answer": "Composition means feeding the entire output of one function directly into another function as its input. f(g(x)) means: first evaluate g at x, then take that result and plug it into f. It's often written (f ∘ g)(x), using a small circle between the two function names.<div class=\"example-box\"><div class=\"label\">Definition</div><p class=\"math-line\">\\[ (f \\circ g)(x) = f(g(x)) \\]</p></div>"
+    },
+    {
+      "id": "faq-5",
+      "category": "conceptual",
+      "question": "What's the difference between the \"inner function\" and the \"outer function\" in a composition?",
+      "answer": "In f(g(x)), g is the inner function — it's the one that gets applied first, directly to the original input x. f is the outer function — it takes whatever g produced and processes it further. Think of it as an assembly line: the input goes through the inner function's station first, and only afterward moves on to the outer function's station.<div class=\"graph-wrap\"><svg viewBox=\"0 0 380 160\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"20\" y=\"85\" font-size=\"16\" fill=\"#4a4a5a\" font-weight=\"600\">x</text><path d=\"M 40 80 L 75 80\" stroke=\"#4a4a5a\" stroke-width=\"2\" marker-end=\"url(#arrowFn5)\"/><rect x=\"80\" y=\"45\" width=\"90\" height=\"70\" rx=\"8\" fill=\"#e6f2f2\" stroke=\"#1a6b6b\" stroke-width=\"2\"/><text x=\"95\" y=\"75\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">g(x)</text><text x=\"90\" y=\"95\" font-size=\"10\" fill=\"#1a6b6b\">inner function</text><path d=\"M 170 80 L 205 80\" stroke=\"#4a4a5a\" stroke-width=\"2\" marker-end=\"url(#arrowFn5)\"/><text x=\"178\" y=\"70\" font-size=\"11\" fill=\"#4a4a5a\">g(x)</text><rect x=\"210\" y=\"45\" width=\"90\" height=\"70\" rx=\"8\" fill=\"#fdf0e8\" stroke=\"#D4622A\" stroke-width=\"2\"/><text x=\"228\" y=\"75\" font-size=\"13\" fill=\"#D4622A\" font-weight=\"700\">f( )</text><text x=\"220\" y=\"95\" font-size=\"10\" fill=\"#D4622A\">outer function</text><path d=\"M 300 80 L 335 80\" stroke=\"#4a4a5a\" stroke-width=\"2\" marker-end=\"url(#arrowFn5)\"/><text x=\"335\" y=\"85\" font-size=\"14\" fill=\"#4a4a5a\" font-weight=\"600\">f(g(x))</text><defs><marker id=\"arrowFn5\" markerWidth=\"8\" markerHeight=\"8\" refX=\"4\" refY=\"4\" orient=\"auto\"><path d=\"M0,0 L8,4 L0,8 Z\" fill=\"#4a4a5a\"/></marker></defs></svg></div><p class=\"graph-caption\">The input passes through the inner function first, and the result feeds into the outer function.</p>"
+    },
+    {
+      "id": "faq-6",
+      "category": "conceptual",
+      "question": "Why does order matter in composition — is f(g(x)) the same as g(f(x))?",
+      "answer": "Almost never. Swapping the order changes which function gets applied first, and since most functions transform their input in a specific, non-reversible way, running them in the opposite order typically produces a completely different result.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Let \\( f(x) = x+1 \\) and \\( g(x) = x^2 \\).</p><p class=\"math-line\">\\( f(g(x)) = (x^2)+1 = x^2+1 \\)</p><p class=\"math-line\">\\( g(f(x)) = (x+1)^2 = x^2+2x+1 \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">Different results — order matters.</p></div>"
+    },
+    {
+      "id": "faq-7",
+      "category": "sticking-points",
+      "question": "How do I find (f+g)(x), (f−g)(x), (f·g)(x), and (f/g)(x) given two function rules?",
+      "answer": "Write out both function rules, then simply apply the operation between them and simplify the resulting expression using ordinary algebra.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Let \\( f(x) = x^2-3x \\) and \\( g(x) = x^3-4x^2+7 \\)</p><p class=\"math-line\">\\( (f+g)(x) = (x^2-3x)+(x^3-4x^2+7) = x^3-3x^2-3x+7 \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( (f-g)(x) = (x^2-3x)-(x^3-4x^2+7) = -x^3+5x^2-3x-7 \\)</p></div>"
+    },
+    {
+      "id": "faq-8",
+      "category": "sticking-points",
+      "question": "How do I evaluate a combined function like (f+g)(3) at a specific number?",
+      "answer": "Evaluate each original function separately at that number first, then add (or subtract, multiply, divide) the two resulting numbers together.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Let \\( f(x)=x^2-3x \\), \\( g(x)=x^3-4x^2+7 \\). Find \\( (f+g)(3) \\).</p><p class=\"math-line\">\\( f(3) = 9-9=0 \\) &nbsp;&nbsp; \\( g(3) = 27-36+7=-2 \\)</p><p class=\"math-line\">\\( (f+g)(3) = 0+(-2) = -2 \\)</p></div>"
+    },
+    {
+      "id": "faq-9",
+      "category": "sticking-points",
+      "question": "How do I evaluate a composition like f(g(x)) symbolically?",
+      "answer": "Take the entire rule for g(x) and substitute it in for every x that appears in f(x)'s rule — then simplify.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Let \\( f(x) = \\dfrac{1}{3x-5} \\) and \\( g(x) = x^3-2 \\). Find \\( f(g(x)) \\).</p><p class=\"math-line\">Replace every \\( x \\) in \\( f \\) with \\( g(x) = x^3-2 \\):</p><p class=\"math-line\">\\( f(g(x)) = \\dfrac{1}{3(x^3-2)-5} \\)</p></div>"
+    },
+    {
+      "id": "faq-10",
+      "category": "sticking-points",
+      "question": "How do I evaluate a composition like f(g(3)) at a specific number — where do I start?",
+      "answer": "Always work from the inside out: evaluate the inner function at the number first, then take that result and plug it into the outer function.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Let \\( f(x) = \\dfrac{1}{3x-5} \\) and \\( g(x) = x^3-2 \\). Find \\( f(g(3)) \\).</p><p class=\"math-line\">Step 1 — inner first: \\( g(3) = 3^3-2 = 25 \\)</p><p class=\"math-line\">Step 2 — outer: \\( f(25) = \\dfrac{1}{3(25)-5} = \\dfrac{1}{70} \\)</p></div>"
+    },
+    {
+      "id": "faq-11",
+      "category": "sticking-points",
+      "question": "How do I evaluate a composition using a table of values instead of equations?",
+      "answer": "Work from the inside out, exactly as you would with equations — just look up values in the table instead of calculating them. Find the inner input in the table to get the inner output, then find that result as an input in the table to get your final answer.<div class=\"example-box\"><div class=\"label\">Worked Example</div><table style=\"border-collapse:collapse;margin:0.5rem 0;\"><tr><th style=\"border:1px solid #d4d4d8;padding:4px 10px;background:#e6f2f2;\">x</th><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">1</td><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">2</td><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">3</td></tr><tr><th style=\"border:1px solid #d4d4d8;padding:4px 10px;background:#e6f2f2;\">g(x)</th><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">3</td><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">1</td><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">2</td></tr><tr><th style=\"border:1px solid #d4d4d8;padding:4px 10px;background:#fdf0e8;\">f(x)</th><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">5</td><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">6</td><td style=\"border:1px solid #d4d4d8;padding:4px 10px;\">4</td></tr></table><p class=\"math-line\">Find \\( f(g(2)) \\): first, \\( g(2)=1 \\). Then \\( f(1)=6 \\). So \\( f(g(2))=6 \\).</p></div>"
+    },
+    {
+      "id": "faq-12",
+      "category": "sticking-points",
+      "question": "How do I evaluate a composition using graphs instead of equations?",
+      "answer": "Same inside-out process one more time: find the inner input on the inner function's graph to read off its output, then locate that output as an input on the outer function's graph to read off the final answer. It's the exact same skill from FN2 (reading function values from a graph) — you're just doing it twice in a row."
+    },
+    {
+      "id": "faq-13",
+      "category": "sticking-points",
+      "question": "Why might f(g(x)) be undefined even if f(x) and g(x) are both defined separately?",
+      "answer": "Composition can fail even when both individual functions work fine on their own — the issue is whether g's output actually lands somewhere f can accept. If g(x) produces a value that isn't in f's domain, the composition breaks down at that input, even though f and g are each perfectly valid functions individually.<div class=\"example-box\"><div class=\"label\">Example</div><p class=\"math-line\">If \\( f(4) \\) is undefined, and \\( g(2) = 4 \\), then \\( f(g(2)) \\) is undefined too — even though \\( g(2) \\) itself works fine.</p></div>"
+    },
+    {
+      "id": "faq-14",
+      "category": "sticking-points",
+      "question": "How do I find the domain of a composition like f(g(x))?",
+      "answer": "You need two things to both hold true: x has to be in the domain of g (so the inner function is defined), AND g(x) has to land in the domain of f (so the outer function accepts that result). In other words, the range of the inner function needs to fit inside the domain of the outer function — any input that breaks either condition gets excluded from the composition's domain."
+    },
+    {
+      "id": "faq-15",
+      "category": "connections",
+      "question": "How does function composition connect to everything we've learned about functions so far (FN1/FN2)?",
+      "answer": "Composition leans on nearly everything from earlier in this chapter: you need FN1's understanding of domain to figure out where a composition is defined, and you need FN2's function notation and evaluation skills to actually compute f(g(x)) at any given input. Composition isn't a new kind of math — it's a new way of combining skills you already have."
+    },
+    {
+      "id": "faq-16",
+      "category": "connections",
+      "question": "Where will function composition show up again later in the course?",
+      "answer": "Composition becomes essential once you study inverse functions — an inverse is specifically defined using composition (f and its inverse compose to give back the original input). It also reappears constantly when building more complex functions out of simpler pieces, which becomes especially important in transformations of functions and, later, in calculus when using the chain rule."
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid-1",
+      "title": "Find Sum, Difference, Product, and Quotient of Functions (Ex 1)",
+      "url": "https://www.youtube.com/watch?v=j2rScesb0fI",
+      "description": "Four worked examples finding the sum, difference, product, and quotient of two functions, including the domain.",
+      "category": "combining",
+      "relatedFaqs": [
+        "faq-1",
+        "faq-2",
+        "faq-7"
+      ]
+    },
+    {
+      "id": "vid-2",
+      "title": "Find Sum, Difference, Product, and Quotient of Functions (Ex 2)",
+      "url": "https://www.youtube.com/watch?v=lI2HkCrZvXQ",
+      "description": "A second set of worked examples combining functions arithmetically, including the domain.",
+      "category": "combining",
+      "relatedFaqs": [
+        "faq-3",
+        "faq-8"
+      ]
+    },
+    {
+      "id": "vid-3",
+      "title": "Determine f(g(x)) and g(f(x)) with Linear and Quadratic Functions",
+      "url": "https://youtu.be/uAUo8pbKdAE",
+      "description": "Finding both compositions of a linear and a quadratic function, showing why the order changes the result.",
+      "category": "composition",
+      "relatedFaqs": [
+        "faq-6",
+        "faq-9"
+      ]
+    },
+    {
+      "id": "vid-4",
+      "title": "Evaluate Composite Functions Using Tables of Values",
+      "url": "https://www.youtube.com/watch?v=Blvv-Dnfubo",
+      "description": "Four worked examples evaluating a composite function using tables of values for the two functions.",
+      "category": "composition",
+      "relatedFaqs": [
+        "faq-11"
+      ]
+    },
+    {
+      "id": "vid-5",
+      "title": "Evaluate Composite Functions from Graphs",
+      "url": "https://www.youtube.com/watch?v=b-i7N0hE-Ys",
+      "description": "Four worked examples evaluating a composite function directly from the graphs of the two functions.",
+      "category": "composition",
+      "relatedFaqs": [
+        "faq-12"
+      ]
+    }
+  ],
+  "apps": [],
+  "prompts": {
+    "guided": [
+      {
+        "id": "prompt-1",
+        "title": "Practice Combining Functions",
+        "prompt": "I'm learning to find the sum, difference, product, and quotient of two functions. Give me two functions and ask me to find all four combinations. Check my work on each one, and remind me to note any domain restriction on the quotient."
+      },
+      {
+        "id": "prompt-2",
+        "title": "Understand Inner vs. Outer Functions",
+        "prompt": "I'm learning function composition, f(g(x)). Give me two functions and ask me to identify which one is the inner function and which is the outer function, and explain in my own words what order they get applied in. Then ask me to actually compute f(g(x)) and check my reasoning."
+      },
+      {
+        "id": "prompt-3",
+        "title": "Practice Evaluating Compositions at a Number",
+        "prompt": "I'm practicing evaluating compositions like f(g(3)) at specific numbers. Give me two functions and a number, and walk me through evaluating the inner function first, then the outer function. Then give me three more practice problems and check my work, making sure I always start from the inside."
+      },
+      {
+        "id": "prompt-4",
+        "title": "Explore Why Order Matters",
+        "prompt": "I'm learning that f(g(x)) usually isn't the same as g(f(x)). Give me two functions and ask me to predict whether the two compositions will be equal before I calculate them. Then have me actually compute both and compare. Do this with a few different pairs of functions, including at least one pair where the two compositions happen to be equal, so I can see that it's rare but not impossible."
+      },
+      {
+        "id": "prompt-5",
+        "title": "Practice Domain of a Composition",
+        "prompt": "I'm learning how to find the domain of a composition f(g(x)). Give me two functions where at least one of them has a domain restriction (like a square root or a fraction), and walk me through figuring out the domain of the composition step by step, making sure I check both the domain of g and where g(x) lands relative to the domain of f."
+      }
+    ],
+    "open": [
+      {
+        "id": "open-1",
+        "title": "Create Your Own",
+        "prompt": "Use the AI tool of your choice. Start by describing what you're confused about or curious about from Section FN5 (Combining and Composing Functions). Ask the AI to help you explore that idea. Share what you learned and what surprised you."
+      }
+    ]
+  }
+}
