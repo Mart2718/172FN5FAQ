@@ -198,7 +198,7 @@
       "id": "FN5",
       "label": "FN5: Combining and Composing Functions",
       "sectionLabel": "FN5, Combining and Composing Functions",
-      "intro": "Builds to the FN5 check: adding, subtracting, multiplying, and dividing functions, and finding compositions as expressions and at a number.",
+      "intro": "Builds to the FN5 check: adding, subtracting, multiplying, and dividing functions, and finding compositions as expressions, at a number, and from a table of values.",
       "graphs": {},
       "stages": [
         {
@@ -358,6 +358,31 @@
                   "tab": "tab-videos"
                 }
               ]
+            },
+            {
+              "id": "fn5-t5",
+              "title": "Compositions from a table",
+              "target": "Evaluate compositions like \\(f(g(1))\\) from a table of values: find the inside value in the table, then look up that output as the new input.",
+              "cold": "Use the table to find (a) \\(f(g(1))\\), (b) \\(g(f(3))\\), (c) \\(f(f(2))\\), and (d) \\((f + g)(2)\\).<div class=\"table-wrap\"><table class=\"lookup\"><tr><th scope=\"row\">\\(x\\)</th><td>\\(-1\\)</td><td>\\(0\\)</td><td>\\(1\\)</td><td>\\(2\\)</td><td>\\(3\\)</td><td>\\(4\\)</td></tr><tr><th scope=\"row\">\\(f(x)\\)</th><td>\\(3\\)</td><td>\\(4\\)</td><td>\\(2\\)</td><td>\\(0\\)</td><td>\\(-1\\)</td><td>\\(1\\)</td></tr><tr><th scope=\"row\">\\(g(x)\\)</th><td>\\(2\\)</td><td>\\(-1\\)</td><td>\\(4\\)</td><td>\\(3\\)</td><td>\\(1\\)</td><td>\\(0\\)</td></tr></table></div>",
+              "coldPlain": "Use this table to find (a) f(g(1)), (b) g(f(3)), (c) f(f(2)), (d) (f + g)(2). Table: x: -1, 0, 1, 2, 3, 4 | f(x): 3, 4, 2, 0, -1, 1 | g(x): 2, -1, 4, 3, 1, 0",
+              "coldA": "(a) \\(g(1) = 4\\), then \\(f(4) = 1\\). (b) \\(f(3) = -1\\), then \\(g(-1) = 2\\). (c) \\(f(2) = 0\\), then \\(f(0) = 4\\). (d) \\(f(2) + g(2) = 0 + 3 = 3\\).",
+              "solution": "(a) Inside first: find x = 1 in the top row and read g(1) = 4. Now use 4 as the input to f: f(4) = 1. (b) f(3) = -1, then g(-1) = 2. (c) f(2) = 0, then f(0) = 4. (d) This is a sum, not a composition: f(2) + g(2) = 0 + 3 = 3.",
+              "mistake": "Reading the second lookup from the same column instead of finding the new input in the x row, or multiplying/adding when the question asks for a composition.",
+              "again": "Using the same table, find (a) \\(g(f(1))\\), (b) \\(f(g(4))\\), (c) \\(g(g(3))\\), and (d) \\((f \\cdot g)(0)\\).<div class=\"table-wrap\"><table class=\"lookup\"><tr><th scope=\"row\">\\(x\\)</th><td>\\(-1\\)</td><td>\\(0\\)</td><td>\\(1\\)</td><td>\\(2\\)</td><td>\\(3\\)</td><td>\\(4\\)</td></tr><tr><th scope=\"row\">\\(f(x)\\)</th><td>\\(3\\)</td><td>\\(4\\)</td><td>\\(2\\)</td><td>\\(0\\)</td><td>\\(-1\\)</td><td>\\(1\\)</td></tr><tr><th scope=\"row\">\\(g(x)\\)</th><td>\\(2\\)</td><td>\\(-1\\)</td><td>\\(4\\)</td><td>\\(3\\)</td><td>\\(1\\)</td><td>\\(0\\)</td></tr></table></div>",
+              "againA": "(a) \\(f(1) = 2\\), \\(g(2) = 3\\). (b) \\(g(4) = 0\\), \\(f(0) = 4\\). (c) \\(g(3) = 1\\), \\(g(1) = 4\\). (d) \\(f(0) \\cdot g(0) = 4 \\cdot (-1) = -4\\).",
+              "stretch": "Using the same table, find the value of \\(x\\) for which \\(f(g(x)) = 1\\).",
+              "stretchA": "\\(f(4) = 1\\), so you need \\(g(x) = 4\\). That happens at \\(x = 1\\). Check: \\(f(g(1)) = f(4) = 1\\).",
+              "reflect": "After the first lookup, where do you go to find the next input?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                }
+              ]
             }
           ]
         },
@@ -368,14 +393,14 @@
             {
               "id": "fn5-f1",
               "title": "Practice check",
-              "target": "Combine two functions four ways, then find a composition as an expression and at a number, the way the FN5 check asks.",
-              "cold": "<strong>Part 1.</strong> Let \\(f(x) = 5x + 2\\) and \\(g(x) = x^3 - 3x^2\\). Find (a) \\(f(x) + g(x)\\), (b) \\(f(x) - g(x)\\), (c) \\(f(x) \\times g(x)\\), (d) \\(\\dfrac{f(x)}{g(x)}\\).<br><br><strong>Part 2.</strong> Let \\(h(x) = \\sqrt{3x + 4}\\) and \\(p(x) = 2x^2 - 1\\). Find (e) \\(p(h(x))\\) and (f) \\(h(p(2))\\).",
-              "coldPlain": "Part 1: Let f(x) = 5x + 2 and g(x) = x^3 - 3x^2. Find (a) f + g, (b) f - g, (c) f * g, (d) f / g. Part 2: Let h(x) = sqrt(3x + 4) and p(x) = 2x^2 - 1. Find (e) p(h(x)) and (f) h(p(2)).",
-              "coldA": "(a) \\(x^3 - 3x^2 + 5x + 2\\) (b) \\(-x^3 + 3x^2 + 5x + 2\\) (c) \\(5x^4 - 13x^3 - 6x^2\\) (d) \\(\\dfrac{5x + 2}{x^3 - 3x^2}\\)<br>(e) \\(2\\left(\\sqrt{3x + 4}\\right)^2 - 1 = 2(3x + 4) - 1 = 6x + 7\\) (f) \\(p(2) = 7\\), \\(h(7) = \\sqrt{25} = 5\\)",
-              "solution": "(a) 5x + 2 + x^3 - 3x^2 = x^3 - 3x^2 + 5x + 2. (b) 5x + 2 - x^3 + 3x^2 = -x^3 + 3x^2 + 5x + 2. (c) (5x + 2)(x^3 - 3x^2) = 5x^4 - 15x^3 + 2x^3 - 6x^2 = 5x^4 - 13x^3 - 6x^2. (d) (5x + 2)/(x^3 - 3x^2). (e) p(h(x)) = 2(sqrt(3x + 4))^2 - 1 = 2(3x + 4) - 1 = 6x + 7. (f) p(2) = 2(4) - 1 = 7, then h(7) = sqrt(25) = 5.",
+              "target": "Combine two functions four ways, find compositions as expressions and at a number, and evaluate compositions from a table.",
+              "cold": "<strong>Part 1.</strong> Let \\(f(x) = 5x + 2\\) and \\(g(x) = x^3 - 3x^2\\). Find (a) \\(f(x) + g(x)\\), (b) \\(f(x) - g(x)\\), (c) \\(f(x) \\times g(x)\\), (d) \\(\\dfrac{f(x)}{g(x)}\\).<br><br><strong>Part 2.</strong> Let \\(h(x) = \\sqrt{3x + 4}\\) and \\(p(x) = 2x^2 - 1\\). Find (e) \\(p(h(x))\\) and (f) \\(h(p(2))\\).<br><br><strong>Part 3.</strong> Use the table to find (g) \\(p(q(2))\\) and (h) \\(q(p(3))\\).<div class=\"table-wrap\"><table class=\"lookup\"><tr><th scope=\"row\">\\(x\\)</th><td>\\(0\\)</td><td>\\(1\\)</td><td>\\(2\\)</td><td>\\(3\\)</td><td>\\(4\\)</td></tr><tr><th scope=\"row\">\\(p(x)\\)</th><td>\\(2\\)</td><td>\\(4\\)</td><td>\\(3\\)</td><td>\\(0\\)</td><td>\\(1\\)</td></tr><tr><th scope=\"row\">\\(q(x)\\)</th><td>\\(3\\)</td><td>\\(0\\)</td><td>\\(4\\)</td><td>\\(2\\)</td><td>\\(1\\)</td></tr></table></div>",
+              "coldPlain": "Part 1: Let f(x) = 5x + 2 and g(x) = x^3 - 3x^2. Find (a) f + g, (b) f - g, (c) f * g, (d) f / g. Part 2: Let h(x) = sqrt(3x + 4) and p(x) = 2x^2 - 1. Find (e) p(h(x)) and (f) h(p(2)). Part 3: Use this table to find (g) p(q(2)) and (h) q(p(3)). Table: x: 0, 1, 2, 3, 4 | p(x): 2, 4, 3, 0, 1 | q(x): 3, 0, 4, 2, 1",
+              "coldA": "(a) \\(x^3 - 3x^2 + 5x + 2\\) (b) \\(-x^3 + 3x^2 + 5x + 2\\) (c) \\(5x^4 - 13x^3 - 6x^2\\) (d) \\(\\dfrac{5x + 2}{x^3 - 3x^2}\\)<br>(e) \\(2\\left(\\sqrt{3x + 4}\\right)^2 - 1 = 2(3x + 4) - 1 = 6x + 7\\) (f) \\(p(2) = 7\\), \\(h(7) = \\sqrt{25} = 5\\)<br>(g) \\(q(2) = 4\\), \\(p(4) = 1\\) (h) \\(p(3) = 0\\), \\(q(0) = 3\\)",
+              "solution": "(a) 5x + 2 + x^3 - 3x^2 = x^3 - 3x^2 + 5x + 2. (b) 5x + 2 - x^3 + 3x^2 = -x^3 + 3x^2 + 5x + 2. (c) (5x + 2)(x^3 - 3x^2) = 5x^4 - 15x^3 + 2x^3 - 6x^2 = 5x^4 - 13x^3 - 6x^2. (d) (5x + 2)/(x^3 - 3x^2). (e) p(h(x)) = 2(sqrt(3x + 4))^2 - 1 = 2(3x + 4) - 1 = 6x + 7. (f) p(2) = 2(4) - 1 = 7, then h(7) = sqrt(25) = 5. (g) q(2) = 4, then p(4) = 1. (h) p(3) = 0, then q(0) = 3.",
               "mistake": "Mixing up the order in part 2: (e) has p on the outside, but (f) has h on the outside.",
-              "again": "<strong>Part 1.</strong> Let \\(f(x) = 2x^2 + x\\) and \\(g(x) = \\dfrac{3x}{x + 4}\\). Find (a) \\(f + g\\), (b) \\(f - g\\), (c) \\(f \\times g\\), (d) \\(\\dfrac{f}{g}\\).<br><br><strong>Part 2.</strong> Let \\(r(x) = 4x - 5\\) and \\(q(x) = x^3 + 2\\). Find (e) \\(q(r(x))\\) and (f) \\(r(q(-1))\\).",
-              "againA": "(a) \\(2x^2 + x + \\dfrac{3x}{x + 4}\\) (b) \\(2x^2 + x - \\dfrac{3x}{x + 4}\\) (c) \\(\\dfrac{3x(2x^2 + x)}{x + 4} = \\dfrac{6x^3 + 3x^2}{x + 4}\\) (d) \\(\\dfrac{(2x^2 + x)(x + 4)}{3x} = \\dfrac{(2x + 1)(x + 4)}{3}\\)<br>(e) \\((4x - 5)^3 + 2\\) (f) \\(q(-1) = 1\\), \\(r(1) = -1\\)",
+              "again": "<strong>Part 1.</strong> Let \\(f(x) = 2x^2 + x\\) and \\(g(x) = \\dfrac{3x}{x + 4}\\). Find (a) \\(f + g\\), (b) \\(f - g\\), (c) \\(f \\times g\\), (d) \\(\\dfrac{f}{g}\\).<br><br><strong>Part 2.</strong> Let \\(r(x) = 4x - 5\\) and \\(q(x) = x^3 + 2\\). Find (e) \\(q(r(x))\\) and (f) \\(r(q(-1))\\).<br><br><strong>Part 3.</strong> Use the table to find (g) \\(p(p(0))\\) and (h) \\(q(q(1))\\).<div class=\"table-wrap\"><table class=\"lookup\"><tr><th scope=\"row\">\\(x\\)</th><td>\\(0\\)</td><td>\\(1\\)</td><td>\\(2\\)</td><td>\\(3\\)</td><td>\\(4\\)</td></tr><tr><th scope=\"row\">\\(p(x)\\)</th><td>\\(2\\)</td><td>\\(4\\)</td><td>\\(3\\)</td><td>\\(0\\)</td><td>\\(1\\)</td></tr><tr><th scope=\"row\">\\(q(x)\\)</th><td>\\(3\\)</td><td>\\(0\\)</td><td>\\(4\\)</td><td>\\(2\\)</td><td>\\(1\\)</td></tr></table></div>",
+              "againA": "(a) \\(2x^2 + x + \\dfrac{3x}{x + 4}\\) (b) \\(2x^2 + x - \\dfrac{3x}{x + 4}\\) (c) \\(\\dfrac{3x(2x^2 + x)}{x + 4} = \\dfrac{6x^3 + 3x^2}{x + 4}\\) (d) \\(\\dfrac{(2x^2 + x)(x + 4)}{3x} = \\dfrac{(2x + 1)(x + 4)}{3}\\)<br>(e) \\((4x - 5)^3 + 2\\) (f) \\(q(-1) = 1\\), \\(r(1) = -1\\)<br>(g) \\(p(0) = 2\\), \\(p(2) = 3\\) (h) \\(q(1) = 0\\), \\(q(0) = 3\\)",
               "reflect": "Which of the six parts do you want to practice more?",
               "related": [
                 {
