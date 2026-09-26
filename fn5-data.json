@@ -192,5 +192,205 @@
         "prompt": "Use the AI tool of your choice. Start by describing what you're confused about or curious about from Section FN5 (Combining and Composing Functions). Ask the AI to help you explore that idea. Share what you learned and what surprised you."
       }
     ]
-  }
+  },
+  "paths": [
+    {
+      "id": "FN5",
+      "label": "FN5: Combining and Composing Functions",
+      "sectionLabel": "FN5, Combining and Composing Functions",
+      "intro": "Builds to the FN5 check: adding, subtracting, multiplying, and dividing functions, and finding compositions as expressions and at a number.",
+      "graphs": {},
+      "stages": [
+        {
+          "stage": "Get ready",
+          "desc": "Two quick skills FN5 leans on. Skip any you already have.",
+          "stops": [
+            {
+              "id": "fn5-g1",
+              "title": "Subtract and multiply polynomials",
+              "target": "Subtract polynomials by distributing the negative to every term, and multiply by distributing every term.",
+              "cold": "Simplify \\((3x^2 + 2x - 1) - (x^2 - 5x + 4)\\).",
+              "coldPlain": "Simplify (3x^2 + 2x - 1) - (x^2 - 5x + 4).",
+              "coldA": "\\(3x^2 + 2x - 1 - x^2 + 5x - 4 = 2x^2 + 7x - 5\\).",
+              "solution": "Distribute the minus sign to every term in the second polynomial: -x^2 + 5x - 4. Then combine like terms: (3x^2 - x^2) + (2x + 5x) + (-1 - 4) = 2x^2 + 7x - 5.",
+              "mistake": "Subtracting only the first term of the second polynomial.",
+              "again": "Multiply \\((2x - 3)(x^2 + 4)\\).",
+              "againA": "\\(2x^3 + 8x - 3x^2 - 12 = 2x^3 - 3x^2 + 8x - 12\\).",
+              "reflect": "When you subtract a polynomial, what happens to each of its terms?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                }
+              ]
+            },
+            {
+              "id": "fn5-g2",
+              "title": "Plug an expression into a function",
+              "target": "Replace every \\(x\\) in a function with an expression, using parentheses, then simplify.",
+              "cold": "Let \\(f(x) = 2x^2 + 1\\). Find \\(f(x - 3)\\).",
+              "coldPlain": "Let f(x) = 2x^2 + 1. Find f(x - 3).",
+              "coldA": "\\(2(x - 3)^2 + 1 = 2(x^2 - 6x + 9) + 1 = 2x^2 - 12x + 19\\).",
+              "solution": "Replace x with (x - 3): f(x - 3) = 2(x - 3)^2 + 1. Expand: (x - 3)^2 = x^2 - 6x + 9, so 2x^2 - 12x + 18 + 1 = 2x^2 - 12x + 19.",
+              "mistake": "Writing (x - 3)^2 as x^2 - 9, or dropping the parentheses.",
+              "again": "Let \\(g(x) = \\sqrt{3x + 2}\\). Find \\(g(x^2)\\).",
+              "againA": "\\(\\sqrt{3x^2 + 2}\\).",
+              "reflect": "Why do the parentheses matter when you plug in an expression?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "Learn the skills",
+          "desc": "One stop per type of question on the FN5 check, in order.",
+          "stops": [
+            {
+              "id": "fn5-t1",
+              "title": "Sum and difference",
+              "target": "Find \\(f(x) + g(x)\\) and \\(f(x) - g(x)\\) by combining like terms, putting the whole of \\(g(x)\\) in parentheses when subtracting.",
+              "cold": "Let \\(f(x) = 4x - 3\\) and \\(g(x) = 2x^2 + x - 5\\). Find \\(f(x) + g(x)\\) and \\(f(x) - g(x)\\).",
+              "coldPlain": "Let f(x) = 4x - 3 and g(x) = 2x^2 + x - 5. Find f(x) + g(x) and f(x) - g(x).",
+              "coldA": "\\(f(x) + g(x) = 2x^2 + 5x - 8\\). \\(f(x) - g(x) = 4x - 3 - 2x^2 - x + 5 = -2x^2 + 3x + 2\\).",
+              "solution": "Sum: 4x - 3 + 2x^2 + x - 5 = 2x^2 + 5x - 8. Difference: (4x - 3) - (2x^2 + x - 5) = 4x - 3 - 2x^2 - x + 5 = -2x^2 + 3x + 2.",
+              "mistake": "Writing f(x) - g(x) as 4x - 3 - 2x^2 + x - 5, subtracting only the first term.",
+              "again": "Let \\(p(x) = x^3 + 2x\\) and \\(q(x) = 3x^2 - 2\\). Find \\(p(x) + q(x)\\) and \\(p(x) - q(x)\\).",
+              "againA": "\\(p + q = x^3 + 3x^2 + 2x - 2\\). \\(p - q = x^3 - 3x^2 + 2x + 2\\).",
+              "reflect": "What is the one thing that goes wrong most often in \\(f(x) - g(x)\\)?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "fn5-t2",
+              "title": "Product and quotient",
+              "target": "Find \\(f(x) \\cdot g(x)\\) by multiplying out, and \\(\\dfrac{f(x)}{g(x)}\\) by writing one over the other (dividing by a fraction means multiplying by its reciprocal).",
+              "cold": "Let \\(f(x) = 3x + 2\\) and \\(g(x) = x^2 - 4x\\). Find \\(f(x) \\cdot g(x)\\) and \\(\\dfrac{f(x)}{g(x)}\\).",
+              "coldPlain": "Let f(x) = 3x + 2 and g(x) = x^2 - 4x. Find f(x) * g(x) and f(x)/g(x).",
+              "coldA": "\\(f \\cdot g = 3x^3 - 12x^2 + 2x^2 - 8x = 3x^3 - 10x^2 - 8x\\). \\(\\dfrac{f}{g} = \\dfrac{3x + 2}{x^2 - 4x}\\).",
+              "solution": "Product: (3x + 2)(x^2 - 4x) = 3x^3 - 12x^2 + 2x^2 - 8x = 3x^3 - 10x^2 - 8x. Quotient: (3x + 2)/(x^2 - 4x). It does not simplify, since the top has no common factor with the bottom.",
+              "mistake": "Canceling terms that are added, like crossing out an x from 3x + 2 and x^2 - 4x.",
+              "again": "Let \\(h(x) = \\sqrt{2x + 3}\\) and \\(r(x) = \\dfrac{4x}{x + 2}\\). Find \\(h(x) \\cdot r(x)\\) and \\(\\dfrac{h(x)}{r(x)}\\).",
+              "againA": "\\(h \\cdot r = \\dfrac{4x\\sqrt{2x + 3}}{x + 2}\\). \\(\\dfrac{h}{r} = \\sqrt{2x + 3} \\cdot \\dfrac{x + 2}{4x} = \\dfrac{(x + 2)\\sqrt{2x + 3}}{4x}\\).",
+              "reflect": "How do you divide by a function that is itself a fraction?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "fn5-t3",
+              "title": "Composition as an expression",
+              "target": "Find \\(f(g(x))\\) by plugging the whole expression \\(g(x)\\) into \\(f\\) wherever \\(x\\) appears. Order matters: \\(f(g(x))\\) and \\(g(f(x))\\) are usually different.",
+              "cold": "Let \\(f(x) = 3x - 1\\) and \\(g(x) = x^2 + 2\\). Find \\(f(g(x))\\).",
+              "coldPlain": "Let f(x) = 3x - 1 and g(x) = x^2 + 2. Find f(g(x)).",
+              "coldA": "\\(f(g(x)) = 3(x^2 + 2) - 1 = 3x^2 + 5\\).",
+              "solution": "The outside function is f, so start with f(x) = 3x - 1 and replace its x with g(x) = x^2 + 2: f(g(x)) = 3(x^2 + 2) - 1 = 3x^2 + 6 - 1 = 3x^2 + 5.",
+              "mistake": "Multiplying f(x) times g(x) instead of plugging g into f, or plugging in the wrong direction.",
+              "again": "Using the same functions, find \\(g(f(x))\\).",
+              "againA": "\\(g(f(x)) = (3x - 1)^2 + 2 = 9x^2 - 6x + 3\\). Different from \\(f(g(x))\\).",
+              "stretch": "Let \\(f(x) = \\sqrt{4x + 1}\\) and \\(g(x) = 2x^3\\). Find \\(f(g(x))\\).",
+              "stretchA": "\\(\\sqrt{4(2x^3) + 1} = \\sqrt{8x^3 + 1}\\).",
+              "reflect": "In \\(f(g(x))\\), which function is the \"outside\" one, and what goes into it?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "fn5-t4",
+              "title": "Composition at a number",
+              "target": "Evaluate \\(f(g(a))\\) from the inside out: find \\(g(a)\\) first, then plug that number into \\(f\\).",
+              "cold": "Let \\(f(x) = 3x - 1\\) and \\(g(x) = x^2 + 2\\). Find \\(f(g(2))\\).",
+              "coldPlain": "Let f(x) = 3x - 1 and g(x) = x^2 + 2. Find f(g(2)).",
+              "coldA": "\\(g(2) = 6\\), then \\(f(6) = 17\\).",
+              "solution": "Work inside out. g(2) = 2^2 + 2 = 6. Then f(6) = 3(6) - 1 = 17. So f(g(2)) = 17.",
+              "mistake": "Computing f(2) first, or multiplying f(2) times g(2).",
+              "again": "Let \\(q(x) = \\dfrac{2x}{x - 1}\\) and \\(p(x) = 3x^2 - 2x\\). Find \\(q(p(-1))\\).",
+              "againA": "\\(p(-1) = 3 + 2 = 5\\), then \\(q(5) = \\dfrac{10}{4} = \\dfrac{5}{2}\\).",
+              "reflect": "Why do you start with the inside function?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "Put it together",
+          "desc": "A practice check in the same two-part format as the FN5 CheckIt exercise.",
+          "stops": [
+            {
+              "id": "fn5-f1",
+              "title": "Practice check",
+              "target": "Combine two functions four ways, then find a composition as an expression and at a number, the way the FN5 check asks.",
+              "cold": "<strong>Part 1.</strong> Let \\(f(x) = 5x + 2\\) and \\(g(x) = x^3 - 3x^2\\). Find (a) \\(f(x) + g(x)\\), (b) \\(f(x) - g(x)\\), (c) \\(f(x) \\times g(x)\\), (d) \\(\\dfrac{f(x)}{g(x)}\\).<br><br><strong>Part 2.</strong> Let \\(h(x) = \\sqrt{3x + 4}\\) and \\(p(x) = 2x^2 - 1\\). Find (e) \\(p(h(x))\\) and (f) \\(h(p(2))\\).",
+              "coldPlain": "Part 1: Let f(x) = 5x + 2 and g(x) = x^3 - 3x^2. Find (a) f + g, (b) f - g, (c) f * g, (d) f / g. Part 2: Let h(x) = sqrt(3x + 4) and p(x) = 2x^2 - 1. Find (e) p(h(x)) and (f) h(p(2)).",
+              "coldA": "(a) \\(x^3 - 3x^2 + 5x + 2\\) (b) \\(-x^3 + 3x^2 + 5x + 2\\) (c) \\(5x^4 - 13x^3 - 6x^2\\) (d) \\(\\dfrac{5x + 2}{x^3 - 3x^2}\\)<br>(e) \\(2\\left(\\sqrt{3x + 4}\\right)^2 - 1 = 2(3x + 4) - 1 = 6x + 7\\) (f) \\(p(2) = 7\\), \\(h(7) = \\sqrt{25} = 5\\)",
+              "solution": "(a) 5x + 2 + x^3 - 3x^2 = x^3 - 3x^2 + 5x + 2. (b) 5x + 2 - x^3 + 3x^2 = -x^3 + 3x^2 + 5x + 2. (c) (5x + 2)(x^3 - 3x^2) = 5x^4 - 15x^3 + 2x^3 - 6x^2 = 5x^4 - 13x^3 - 6x^2. (d) (5x + 2)/(x^3 - 3x^2). (e) p(h(x)) = 2(sqrt(3x + 4))^2 - 1 = 2(3x + 4) - 1 = 6x + 7. (f) p(2) = 2(4) - 1 = 7, then h(7) = sqrt(25) = 5.",
+              "mistake": "Mixing up the order in part 2: (e) has p on the outside, but (f) has h on the outside.",
+              "again": "<strong>Part 1.</strong> Let \\(f(x) = 2x^2 + x\\) and \\(g(x) = \\dfrac{3x}{x + 4}\\). Find (a) \\(f + g\\), (b) \\(f - g\\), (c) \\(f \\times g\\), (d) \\(\\dfrac{f}{g}\\).<br><br><strong>Part 2.</strong> Let \\(r(x) = 4x - 5\\) and \\(q(x) = x^3 + 2\\). Find (e) \\(q(r(x))\\) and (f) \\(r(q(-1))\\).",
+              "againA": "(a) \\(2x^2 + x + \\dfrac{3x}{x + 4}\\) (b) \\(2x^2 + x - \\dfrac{3x}{x + 4}\\) (c) \\(\\dfrac{3x(2x^2 + x)}{x + 4} = \\dfrac{6x^3 + 3x^2}{x + 4}\\) (d) \\(\\dfrac{(2x^2 + x)(x + 4)}{3x} = \\dfrac{(2x + 1)(x + 4)}{3}\\)<br>(e) \\((4x - 5)^3 + 2\\) (f) \\(q(-1) = 1\\), \\(r(1) = -1\\)",
+              "reflect": "Which of the six parts do you want to practice more?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "AI Prompts",
+                  "tab": "tab-prompts"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
