@@ -154,6 +154,37 @@
       "relatedFaqs": [
         "faq-12"
       ]
+    },
+    {
+      "id": "vid-6",
+      "title": "Determine Composite Function Values (Linear and Quadratic)",
+      "url": "https://youtu.be/V5_tODC00Nc",
+      "description": "Evaluates compositions like f(g(3)) from the inside out: find the inner value first, then put it into the outer function.",
+      "category": "composition",
+      "relatedFaqs": [
+        "faq-10"
+      ]
+    },
+    {
+      "id": "vid-7",
+      "title": "Ex 1: Domain of a Composite Function - No Restrictions",
+      "url": "https://youtu.be/GhH-vepoBHM",
+      "description": "Finds the domain of a composition f(g(x)) when neither function restricts the inputs.",
+      "category": "composition",
+      "relatedFaqs": [
+        "faq-14"
+      ]
+    },
+    {
+      "id": "vid-8",
+      "title": "Ex 2: Domain of a Composite Function",
+      "url": "https://youtu.be/OqEsm8k6rdY",
+      "description": "Finds the domain of a composition when the inner or outer function restricts the inputs, so f(g(x)) can be undefined at some x-values.",
+      "category": "composition",
+      "relatedFaqs": [
+        "faq-13",
+        "faq-14"
+      ]
     }
   ],
   "apps": [],
